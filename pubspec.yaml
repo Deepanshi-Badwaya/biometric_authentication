@@ -1,6 +1,6 @@
 name: biometric_authentication
 description: "A Flutter package for biometric authentication"
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Deepanshi-Badwaya/biometric_authentication.git
 
 environment:
