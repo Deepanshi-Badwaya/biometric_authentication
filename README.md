@@ -57,7 +57,7 @@ To use this package, add `biometric_authentication` as a dependency in your `pub
 
 ```yaml
 dependencies:
-  biometric_authentication: ^1.0.2
+  biometric_authentication: ^1.0.3
 ```
 
 ## Additional information
