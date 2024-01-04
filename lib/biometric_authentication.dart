@@ -32,10 +32,9 @@ class _BiometricAuthService extends State<BiometricAuthService> {
         //btn for the pop up of scanning or biometric authentication of finger , face and by password
         child:ElevatedButton(
           onPressed: () async {
-            print('Tapped on Authenticate with Face Recognition button');
             await _authenticate(context);
           },
-          child: const Text('Authenticate with Face Recognition'),
+          child: const Text('Authenticate with biometrics'),
         ),
 
       ),
