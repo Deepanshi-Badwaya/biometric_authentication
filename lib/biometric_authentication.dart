@@ -8,10 +8,9 @@ import 'package:local_auth/local_auth.dart';
 typedef AuthenticationCallback = void Function(bool isAuthenticated);
 
 class BiometricAuthService extends StatefulWidget {
-  const BiometricAuthService({Key? key, required this.title, required this.onAuthentication});
+  const BiometricAuthService({Key? key,required this.onAuthentication});
 
   final AuthenticationCallback onAuthentication;// Callback function to notify the parent widget about authentication status
-  final String title;
 
   @override
   State<BiometricAuthService> createState() => _BiometricAuthService();
@@ -29,9 +28,6 @@ class _BiometricAuthService extends State<BiometricAuthService> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
         //btn for the pop up of scanning or biometric authentication of finger , face and by password
         child:ElevatedButton(
