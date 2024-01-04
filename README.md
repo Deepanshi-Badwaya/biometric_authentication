@@ -22,7 +22,7 @@ Note that `biometric_authentication` requires the use of a FragmentActivity inst
 - If you are using FlutterActivity directly, change it to `FlutterFragmentActivity` in your AndroidManifest.xml.
 
 - If you are using a custom activity, update your `MainActivity.java`:
--
+
 ```dart
 import io.flutter.embedding.android.FlutterFragmentActivity;
 
