@@ -6,7 +6,7 @@ Flutter package that integrates biometric authentication (face, fingerprint, pat
 
 - We get a popup for biometric authentication when we click the elevated button, and then using a callback function, we can navigate from there after a successful authentication.
 - After successfully authenticating by face, finger or password/pattern, depending on the mobile setting, you can navigate
--
+
 ## Getting started
 Import
 
