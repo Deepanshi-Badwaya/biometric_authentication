@@ -57,21 +57,11 @@ class _BiometricAuthService extends State<BiometricAuthService> {
         bool canAuthenticate = await auth.canCheckBiometrics;
         if (canAuthenticate) {
           await auth.authenticate(
-            localizedReason: 'Enroll Face Recognition for the app',
+            localizedReason: 'To use face authentication, you must first enroll your face on the device',
           );
-          // Face recognition is enrolled, proceed with authentication
-          bool authenticated = await auth.authenticate(
-            localizedReason: 'Authenticate to access the app',
-          );
-          print('Authenticated: $authenticated');
-          if (authenticated) {
-            print('Authentication successful');
-            widget.onAuthentication(true); // Call the callback with true for successful authentication
-          } else {
-            print('Authentication failed');
-            widget.onAuthentication(false); // Call the callback with false for failed authentication
-          }
+          widget.onAuthentication(true); // Call the callback with true for successful authentication
         } else {
+          widget.onAuthentication(false); // Call the callback with false for failed authentication
           // Device does not support biometrics
           _showErrorDialog(context, 'Biometric authentication is not available on this device.');
         }
@@ -87,7 +77,7 @@ class _BiometricAuthService extends State<BiometricAuthService> {
           print('Authentication failed');
         }
       }
-    } catch (e) {
+    }catch (e) {
       // Handle exceptions, if any
       print('Error during authentication: $e');
     }
